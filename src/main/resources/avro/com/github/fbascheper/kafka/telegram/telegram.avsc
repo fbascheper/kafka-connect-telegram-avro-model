@@ -1,0 +1,265 @@
+[
+  {
+    "namespace": "com.github.fbascheper.kafka.connect.telegram",
+    "type": "enum",
+    "name": "TgMessageType",
+    "symbols": [
+      "TEXT",
+      "PHOTO",
+      "VIDEO"
+    ]
+  },
+  {
+    "namespace": "com.github.fbascheper.kafka.connect.telegram",
+    "type": "enum",
+    "name": "TgParseMode",
+    "symbols": [
+      "TEXT",
+      "MARKDOWN",
+      "HTML"
+    ]
+  },
+  {
+    "namespace": "com.github.fbascheper.kafka.connect.telegram",
+    "type": "record",
+    "name": "TgAttachment",
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "contents",
+        "type": [
+          "null",
+          "bytes"
+        ]
+      }
+    ]
+  },
+  {
+    "namespace": "com.github.fbascheper.kafka.connect.telegram",
+    "type": "record",
+    "name": "TgReplyKeyboard",
+    "fields": [
+      {
+        "name": "contentsTBD",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "namespace": "com.github.fbascheper.kafka.connect.telegram",
+    "type": "record",
+    "name": "TgTextMessage",
+    "fields": [
+      {
+        "name": "chatId",
+        "type": [
+          "null",
+          "long"
+        ]
+      },
+      {
+        "name": "text",
+        "type": "string"
+      },
+      {
+        "name": "parseMode",
+        "type": [
+          "null",
+          "TgParseMode"
+        ]
+      },
+      {
+        "name": "disableWebPagePreview",
+        "type": [
+          "null",
+          "boolean"
+        ]
+      },
+      {
+        "name": "disableNotification",
+        "type": [
+          "null",
+          "boolean"
+        ]
+      },
+      {
+        "name": "replyToMessageId",
+        "type": [
+          "null",
+          "int"
+        ]
+      },
+      {
+        "name": "replyMarkup",
+        "type": [
+          "null",
+          "TgReplyKeyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "namespace": "com.github.fbascheper.kafka.connect.telegram",
+    "type": "record",
+    "name": "TgPhotoMessage",
+    "fields": [
+      {
+        "name": "chatId",
+        "type": [
+          "null",
+          "long"
+        ]
+      },
+      {
+        "name": "photo",
+        "type": "TgAttachment"
+      },
+      {
+        "name": "caption",
+        "type": "string"
+      },
+      {
+        "name": "parseMode",
+        "type": [
+          "null",
+          "TgParseMode"
+        ]
+      },
+      {
+        "name": "disableNotification",
+        "type": [
+          "null",
+          "boolean"
+        ]
+      },
+      {
+        "name": "replyToMessageId",
+        "type": [
+          "null",
+          "int"
+        ]
+      },
+      {
+        "name": "replyMarkup",
+        "type": [
+          "null",
+          "TgReplyKeyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "namespace": "com.github.fbascheper.kafka.connect.telegram",
+    "type": "record",
+    "name": "TgVideoMessage",
+    "fields": [
+      {
+        "name": "chatId",
+        "type": [
+          "null",
+          "long"
+        ]
+      },
+      {
+        "name": "video",
+        "type": "TgAttachment"
+      },
+      {
+        "name": "caption",
+        "type": "string"
+      },
+      {
+        "name": "duration",
+        "type": [
+          "null",
+          "int"
+        ]
+      },
+      {
+        "name": "width",
+        "type": [
+          "null",
+          "int"
+        ]
+      },
+      {
+        "name": "height",
+        "type": [
+          "null",
+          "int"
+        ]
+      },
+      {
+        "name": "supportsStreaming",
+        "type": [
+          "null",
+          "boolean"
+        ]
+      },
+      {
+        "name": "parseMode",
+        "type": [
+          "null",
+          "TgParseMode"
+        ]
+      },
+      {
+        "name": "disableNotification",
+        "type": [
+          "null",
+          "boolean"
+        ]
+      },
+      {
+        "name": "replyToMessageId",
+        "type": [
+          "null",
+          "int"
+        ]
+      },
+      {
+        "name": "replyMarkup",
+        "type": [
+          "null",
+          "TgReplyKeyboard"
+        ]
+      }
+    ]
+  },
+  {
+    "namespace": "com.github.fbascheper.kafka.connect.telegram",
+    "type": "record",
+    "name": "TgMessage",
+    "fields": [
+      {
+        "name": "messageType",
+        "type": "TgMessageType"
+      },
+      {
+        "name": "textMessage",
+        "type": [
+          "null",
+          "TgTextMessage"
+        ]
+      },
+      {
+        "name": "photoMessage",
+        "type": [
+          "null",
+          "TgPhotoMessage"
+        ]
+      },
+      {
+        "name": "videoMessage",
+        "type": [
+          "null",
+          "TgVideoMessage"
+        ]
+      }
+    ]
+  }
+]
+
