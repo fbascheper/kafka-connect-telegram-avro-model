@@ -23,9 +23,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git@github.com/fbascheper/kafka-connect-telegram-avro-model.git</connection>
+        <connection>scm:git:https://github.com/fbascheper/kafka-connect-telegram-avro-model.git</connection>
         <url>https://github.com/fbascheper/kafka-connect-telegram-avro-model</url>
-        <developerConnection>scm:git:git@github.com/fbascheper/kafka-connect-telegram-avro-model.git
+        <developerConnection>scm:git:https://github.com/fbascheper/kafka-connect-telegram-avro-model.git
         </developerConnection>
     </scm>
 
