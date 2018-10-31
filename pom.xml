@@ -7,7 +7,7 @@
     <groupId>com.github.fbascheper</groupId>
     <artifactId>kafka-connect-telegram-avro-model</artifactId>
     <packaging>jar</packaging>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <name>kafka-connect-telegram-avro-model</name>
     <url>https://github.com/fbascheper/kafka-connect-telegram-avro-model</url>
     <description>
@@ -39,16 +39,7 @@
         <mockito.version>1.10.19</mockito.version>
         <scalatest.version>3.0.1</scalatest.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <confluent.maven.repo>http://packages.confluent.io/maven/</confluent.maven.repo>
     </properties>
-
-    <repositories>
-        <repository>
-            <id>confluent</id>
-            <name>Confluent</name>
-            <url>${confluent.maven.repo}</url>
-        </repository>
-    </repositories>
 
     <dependencies>
         <dependency>
